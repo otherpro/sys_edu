@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="mapper.IndustryDataMapper">
+	    <insert id="add" parameterType="IndustryData" >
+	        insert into industry_data_list ( name ) values (#{name})    
+	    </insert>
+	    
+	    <delete id="delete" parameterType="IndustryData" >
+	        delete from industry_data_list where id= #{id}   
+	    </delete>
+	    
+	    <select id="get" parameterType="_int" resultType="IndustryData">
+	        select * from   industry_data_list  where id= #{id}    
+	    </select>
+
+	    <update id="update" parameterType="IndustryData" >
+	        update industry_data_list set name=#{name} where id=#{id}    
+	    </update>
+	    <select id="list" resultType="IndustryData">
+	        select * from   industry_data_list      
+	    </select>	    
+	</mapper>

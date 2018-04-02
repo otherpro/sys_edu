@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.TechSerSupMapper">
+	<insert id="add" parameterType="TechSerSup">
+		insert into tech_ser_sup_list ( name ) values (#{name})
+	</insert>
+
+	<delete id="delete" parameterType="TechSerSup">
+		delete from tech_ser_sup_list where id= #{id}
+	</delete>
+
+	<select id="get" parameterType="_int" resultType="TechSerSup">
+		select * from tech_ser_sup_list where id= #{id}
+	</select>
+
+	<update id="update" parameterType="TechSerSup">
+		update tech_ser_sup_list set name=#{name} where id=#{id}
+	</update>
+	<select id="list" resultType="TechSerSup">
+		select * from tech_ser_sup_list
+	</select>
+</mapper>

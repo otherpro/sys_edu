@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+	<mapper namespace="mapper.DiaryMapper">
+	    <insert id="add" parameterType="Diary" >
+	        insert into diary_list ( name ) values (#{name})    
+	    </insert>
+	    
+	    <delete id="delete" parameterType="Diary" >
+	        delete from diary_list where id= #{id}   
+	    </delete>
+	    
+	    <select id="get" parameterType="_int" resultType="Diary">
+	        select * from   diary_list  where id= #{id}    
+	    </select>
+
+	    <update id="update" parameterType="Diary" >
+	        update diary_list set name=#{name} where id=#{id}    
+	    </update>
+	    <select id="list" resultType="Diary">
+	        select * from   diary_list      
+	    </select>	    
+	</mapper>
