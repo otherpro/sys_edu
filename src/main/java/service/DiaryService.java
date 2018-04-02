@@ -15,4 +15,6 @@ public interface DiaryService {
 	// 更改备注
 	boolean update(String dia_text);
 
+	void test();
+
 }

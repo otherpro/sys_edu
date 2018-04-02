@@ -5,7 +5,7 @@ import java.util.List;
 import pojo.Diary;
 
 public interface DiaryMapper {
-	public int add(Diary dia);
+	public void add(Diary dia);
 
 	public Diary get(int id);
 

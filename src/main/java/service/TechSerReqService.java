@@ -18,7 +18,7 @@ public interface TechSerReqService {
 	List<TechSerReq> searchByUser(int ind_id, String title);
 
 	// 企业用户搜寻自己所有发布
-	List<TechSerReq> searchByEntId(int id);
+	List<TechSerReq> listByEntId(int id);
 
 	TechSerReq show(int id);
 

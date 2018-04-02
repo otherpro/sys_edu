@@ -1,5 +1,6 @@
 package controller;
 
+import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +17,10 @@ public class AdminController {
 	@RequestMapping("login")
 	public ModelAndView login() {
 		return null;
+	}
+	@Test
+	public void test(){
+		System.out.println(adminService);
 	}
 
 }
